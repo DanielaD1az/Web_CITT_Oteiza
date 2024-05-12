@@ -127,7 +127,7 @@ a:hover{
     width: 100%;
 }
 .noticebutton {
-    background-color: #3082b9;
+    background-color: rgb(48, 130, 185);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -222,18 +222,6 @@ a:hover{
     margin: 30px;
     text-align: center;
 }
-.containerequipo {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #21263d;
-    color: white;
-}
-.columnnequipo {
-    flex: 1 0 15%; /* Ancho mínimo del 20%, se expande proporcionalmente */
-    padding: 5px;
-    text-align: center;
-    border: 0px;
-}
 .button {
     background-color: #3082b9;
     color: white;
@@ -242,12 +230,26 @@ a:hover{
     border: none;
     cursor: pointer;
 }
-#Equipo{
+.fondonosotros{
+    background-color: #21263d;
+    width: 100%;
+}
+.titnosotros{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.containernosotros {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #21263d;
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    margin: 30px;
+    margin: 10px;
+}
+.columnanosotros {
+    flex: 1 0 25%; /* Ancho mínimo del 20%, se expande proporcionalmente */
+    padding: 15px;
+    text-align: center;
+    border: 0px;
 }
 /*Contacto*/
 .grid-contacto{
