@@ -1,0 +1,281 @@
+*{ /* diseño de toda la hoja, la puse sin margenes para que ocupe todo el espacio */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{ /* Body, aquí no va mucho en realidad */
+    width: 100%;
+    background-color: #21263d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.grid-header{ /* grid del header, dividido en 3 partes y con una imagen de background */
+    display: grid;
+    grid-template-columns: 38% 18% 44%;
+    background-image: url(Img/Fondo.png);
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+}
+a {
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.9s ease;
+    transition: font-size 0.5s ease;
+  }
+a:hover{
+    top: -4px;
+    right: 1px;
+    transform: scale(1.5);
+}
+.Caja{ /* configuración de cada tercio del header, menú, logo e íconos respectivamente */
+    width: 100%;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    text-align: right;
+}
+.lista-menu{ /* configuración del área del menú */
+    padding: 50px;
+    list-style: none;
+    display: flex;
+}
+.menu-fuente{ /* configuración del texto del menú */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 30px;
+}
+.RRSS{ /* configuración del área de los íconos */
+    list-style: none;
+    display: flex;
+    padding: 50px;
+    text-align: justify;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .grid-header {
+      flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+    }
+  }
+.grid-footer{ /* aquí se configura el footer, es un grid de sólo una columna, un texto simple y fondo negro */
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #2c3247;
+    width: 100%;
+    padding: 0%;
+    text-decoration: none;
+    text-align: center;
+}
+.text-footer{ /* sólo texto del footer */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 30px;
+}
+/*Hasta aquí todo lo gral, header y footer */
+/*De aquí en adelante el css del Index*/
+.Texto-inicio{
+    background-color: #21263d;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 1%;
+    padding-top: 15px;
+}
+/*Botón Arriba*/
+.subir {
+    background-color: #3082b9;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+/*Noticias*/
+.containernoticias {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #21263d;
+    color: white;
+}
+
+.columnnoticias {
+    flex: 1 0 15%; /* Ancho mínimo del 20%, se expande proporcionalmente */
+    padding: 5px;
+    text-align: center;
+    border: 0px;
+}
+
+@media (max-width: 100%) {
+    .column {
+        flex: 1 0 50%; /* Ancho mínimo del 50% en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 100%) {
+    .column {
+        flex: 1 0 100%; /* Ancho mínimo del 100% en pantallas aún más pequeñas */
+    }
+}
+.fondonoticias{
+    background-color: #21263d;
+    width: 100%;
+}
+.noticebutton {
+    background-color: #3082b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+}
+.card-title{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.titulonoticia{
+    background-color: #21263d;
+    color: #ffff;
+    padding: 5px;
+    padding-top: 10px;
+    text-align: center;
+}
+/*Próximas Actividades*/
+.containeractividades {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #21263d;
+    color: white;
+    margin: 0;
+}
+.columnactividades {
+    flex: 1 0 15%; /* Ancho mínimo del 20%, se expande proporcionalmente */
+    padding: 5px;
+    text-align: center;
+    border: 0px;
+}
+.buttonf {
+    background-color: #3082b9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 45px;
+}
+/*Galería*/
+.containergaleriacomp {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #21263d;
+        color: white;
+}
+.containergaleria {
+    background-color: #21263d;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 100px 0;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box:nth-child(1) {
+    grid-column-start: span 2;
+}
+.box:nth-child(4) {
+    grid-column-start: span 2;
+}
+@media(max-width: 991px) {
+    .containergaleria {
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .box:nth-child(1) {
+        grid-column-start: span 1;
+    }
+    .box:nth-child(4) {
+        grid-column-start: span 1;
+    }
+}
+/*De aquí en adelante el css de Nosotros*/
+#Nosotros{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 30px;
+}
+.Texto-01{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 30px;
+    text-align: center;
+}
+.containerequipo {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #21263d;
+    color: white;
+}
+.columnnequipo {
+    flex: 1 0 15%; /* Ancho mínimo del 20%, se expande proporcionalmente */
+    padding: 5px;
+    text-align: center;
+    border: 0px;
+}
+.button {
+    background-color: #3082b9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+#Equipo{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 30px;
+}
+/*Contacto*/
+.grid-contacto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding-top: 40px;
+    text-align: left;
+}
+form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #21263d;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #21263d;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #2c3247;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: #2c3247;
+    color: rgb(68, 68, 68);
+}
