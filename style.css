@@ -16,6 +16,7 @@ body{ /* Body, aquí no va mucho en realidad */
     padding: 0px;
     text-align: center;
 }
+/*
 a {
     position: relative;
     transform: scale(1);
@@ -26,7 +27,7 @@ a:hover{
     top: -4px;
     right: 1px;
     transform: scale(1.5);
-}
+} */
 .Caja{ /* configuración de cada tercio del header, menú, logo e íconos respectivamente */
     width: 100%;
     padding: 5px;
@@ -166,6 +167,10 @@ a:hover{
     border: none;
     border-radius: 45px;
 }
+.linknot{
+    text-decoration: none;
+    color: #ffff;
+}
 /*Galería*/
 .containergaleriacomp {
         display: flex;
@@ -229,6 +234,7 @@ a:hover{
     border-radius: 25px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 .fondonosotros{
     background-color: #21263d;
@@ -280,4 +286,51 @@ input, textarea {
     border-radius: 25px;
     background-color: #2c3247;
     color: rgb(68, 68, 68);
+}
+/*Tracks*/
+.containertrackcomp {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #21263d;
+    color: white;
+}
+.containertrack {
+    background-color: #21263d;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 10px 0;
+}
+.boxtrack img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.boxtrack:nth-child(1) {
+    grid-column-start: span 2;
+}
+.boxtrack:nth-child(4) {
+    grid-column-start: span 2;
+}
+@media(max-width: 991px) {
+    .containertrack {
+        padding: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .boxtrack:nth-child(1) {
+        grid-column-start: span 1;
+    }
+    .boxtrack:nth-child(4) {
+        grid-column-start: span 1;
+    }
+}
+/*Contacto*/
+.pag404 {
+    background-image: url(Img/404fondo.png);
+}
+.volver404{
+    padding: 265px;
 }
